@@ -177,7 +177,7 @@ const addProperty = function (property) {
     property.description,
     property.thumbnail_photo_url,
     property.cover_photo_url,
-    property.cost_per_night * 100, // Convert dollars to cents
+    property.cost_per_night * 100,
     property.street,
     property.city,
     property.province,
@@ -204,7 +204,7 @@ const addProperty = function (property) {
 
   return pool
     .query(queryString, queryParams)
-    .then((res) => res.rows[0]) // Return the newly added property
+    .then((res) => res.rows[0]) 
     .catch((err) => {
       console.log(err.message);
       return null;
